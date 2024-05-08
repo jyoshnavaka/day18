@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 ,.div3{
+            width:10px;
+            animation-name: div1;
+           
+            animation-duration: 2s;
+            animation-iteration-count: 20;
+            
+            float: left;
+        }
+        .div3{
+            animation-name: div3; 
+        }
+        .div2,.div4 {
+            width:10px;
+            animation-name: div2;
+            background-color: gray;
+            animation-duration: 2s;
+            animation-iteration-count: 20;
+            animation-direction: reverse;
+            float: left;
+        }
+        .div4{
+            animation-name: div4;
+        }
+        @keyframes div1{
+          0% {background-color: violet; height: 3px;}
+          100%{ background-color:orange;height: 3px;}
+          50%{background-color:red;height:150px;}
+         }
+        @keyframes div2{
+            0% { background-color: indigo; height: 3px;}
+          100%{ background-color: skyblue;height: 3px;}
+          50%{ background-color: maroon;height:150px;}
+         }
+         @keyframes div3{
+            0% {background-color: blue; height: 3px;}
+          100%{ background-color: aqua;height: 3px;}
+          50%{background-color: rgb(34, 255, 0);height:150px;}
+         }
+        
+         @keyframes div4{
+            0% {background-color: chocolate; height: 3px;}
+          100%{ background-color: green;height: 3px;}
+          50%{background-color: gold;height:150px;}
+         }
+         .div4:nth-child(2){
+            background-color: red;
+         }
+         .div1:nth-child(2){
+            background-color: greenyellow;
+         }
+
+    </style>
+</head>
+<body style="background-color: black;">
+   <div style=" width: 100px; height: 100px;position: relative; margin-top: 100px;margin-left: 100px;">
+    <div class="div1" style="position: absolute;bottom: 0px;left: 0px;"></div>
+   <div class="div2" style="position: absolute;
+   bottom: 0px; left:20px;"></div>
+   <div class="div3" style="position: absolute;
+   bottom: 0px; left:40px;"></div>
+   <div style="position: absolute;
+   bottom: 0px; left:60px;" class="div4"></div>
+   <div style="position: absolute;
+   bottom: 0px; left:80px;" class="div1"></div>
+   <div style="position: absolute;
+   bottom: 0px; left:100px;" class="div4"></div></div>
+</body>
+</html>
